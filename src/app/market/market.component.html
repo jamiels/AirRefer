@@ -22,9 +22,17 @@
       </div>
       <!-- END JUMBOTRON -->
 
-
-      <ngx-datatable [rows]="rows" [columns]="columns" [rowHeight]="60" class="ngx-datatable airrefer" style="font-size: 20px;">
-      </ngx-datatable>
+      <div class="card-body">
+        <div class="table-responsive">
+          <ngx-datatable #table class='table table-hover' [columns]="columns" [columnMode]="columnModeSetting" [scrollbarH]="scrollBarHorizontal"
+            [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='rows'>
+            <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize" let-selectedCount="selectedCount"
+              let-curPage="curPage" let-offset="offset">
+              Showing {{curPage}} to {{pageSize}} of {{rowCount}} entries
+            </ng-template>
+          </ngx-datatable>
+        </div>
+      </div>
     </div>
   </div>
   <!-- END ROW -->

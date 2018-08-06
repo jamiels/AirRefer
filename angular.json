@@ -21,7 +21,6 @@
             },
             "assets": ["src/assets", "src/favicon.ico"],
             "styles": [
-              "node_modules/@swimlane/ngx-datatable/release/themes/material.css",
               "src/assets/plugins/bootstrap/css/bootstrap.min.css",
               "src/assets/plugins/font-awesome/css/font-awesome.min.css",
               "src/assets/plugins/codrops-stepsform/css/component.css"
