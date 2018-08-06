@@ -36,100 +36,10 @@ export class ExecutiveLayout extends RootLayout implements OnInit {
       iconName: "layouts"
     },
     {
-      label: "Alerts",
-      iconType: "letter",
-      iconName: "Ui",
-      toggle: "close",
-      mToggle: "close",
-      submenu: [
-        {
-          label: "Color",
-          routerLink: "ui/color",
-          iconType: "letter",
-          iconName: "c"
-        },
-        {
-          label: "Typography",
-          routerLink: "ui/typography",
-          iconType: "letter",
-          iconName: "t"
-        },
-        {
-          label: "Icons",
-          routerLink: "ui/icons",
-          iconType: "letter",
-          iconName: "i"
-        },
-        {
-          label: "Buttons",
-          routerLink: "ui/buttons",
-          iconType: "letter",
-          iconName: "b"
-        },
-        {
-          label: "Notifications",
-          routerLink: "ui/notifications",
-          iconType: "letter",
-          iconName: "n"
-        },
-        {
-          label: "Modals",
-          routerLink: "ui/modal",
-          iconType: "letter",
-          iconName: "m"
-        },
-        {
-          label: "Progress & Activity",
-          routerLink: "ui/progress",
-          iconType: "letter",
-          iconName: "pa"
-        },
-        {
-          label: "Tabs & Accordians",
-          routerLink: "ui/tabs",
-          iconType: "letter",
-          iconName: "a"
-        },
-        {
-          label: "Sliders",
-          routerLink: "ui/sliders",
-          iconType: "letter",
-          iconName: "s"
-        },
-        {
-          label: "Treeview",
-          routerLink: "ui/tree",
-          iconType: "letter",
-          iconName: "tv"
-        }
-      ]
-    },
-    {
       label: "Deals",
+      routerLink: "/deals",
       iconType: "pg",
-      iconName: "form",
-      toggle: "close",
-      mToggle: "close",
-      submenu: [
-        {
-          label: "Form Elements",
-          routerLink: "forms/elements",
-          iconType: "letter",
-          iconName: "fe"
-        },
-        {
-          label: "Form Layouts",
-          routerLink: "forms/layouts",
-          iconType: "letter",
-          iconName: "fl"
-        },
-        {
-          label: "Form Wizard",
-          routerLink: "forms/wizard",
-          iconType: "letter",
-          iconName: "fq"
-        }
-      ]
+      iconName: "grid"
     },
     {
       label: "Reports",
@@ -137,6 +47,14 @@ export class ExecutiveLayout extends RootLayout implements OnInit {
       iconType: "pg",
       iconName: "grid"
     },
+    {
+      label: "Back Office",
+      routerLink: "/reports",
+      iconType: "pg",
+      iconName: "grid"
+    }
+
+    /*
     {
       label: "Views",
       routerLink: "views",
@@ -255,7 +173,7 @@ export class ExecutiveLayout extends RootLayout implements OnInit {
       target: "_blank",
       iconType: "letter",
       iconName: "Cl"
-    }
+    }*/
   ];
   ngOnInit() {
     pg.isHorizontalLayout = true;
