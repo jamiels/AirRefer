@@ -1,0 +1,32 @@
+<!-- START CONTAINER FLUID -->
+<pg-container extraHorizontalClass="bg-white" extraClass="bg-white">
+  <!-- START ROW -->
+  <div class="row">
+    <div class="col">
+
+      <!-- START JUMBOTRON -->
+      <div class="jumbotron">
+        <pg-container extraHorizontalClass="p-l-0 p-r-0" extraClass="sm-p-l-0 sm-p-r-0">
+          <div class=" container-fluid   container-fixed-lg sm-p-l-0 sm-p-r-0">
+            <div class="inner" pg-parallax>
+              <div class="row">
+                <div class="col-xl-7 col-lg-6 ">
+                  <h3>Referral Market</h3>
+                </div>
+                <div class="col-xl-5 col-lg-6 ">
+                </div>
+              </div>
+            </div>
+          </div>
+        </pg-container>
+      </div>
+      <!-- END JUMBOTRON -->
+
+
+      <ngx-datatable [rows]="rows" [columns]="columns" [rowHeight]="60">
+      </ngx-datatable>
+    </div>
+  </div>
+  <!-- END ROW -->
+</pg-container>
+<!-- END CONTAINER FLUID -->
