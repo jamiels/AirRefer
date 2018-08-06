@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 @Component({
   selector: "app-market",
   templateUrl: "./market.component.html",
-  styleUrls: ["./market.component.scss"]
+  styleUrls: ["./market.component.css"]
 })
 export class MarketComponent implements OnInit {
   rows = [{ id: "Austin", entity: "Male", category: "Swimlane" }];
