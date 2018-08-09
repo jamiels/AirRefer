@@ -37,7 +37,7 @@ export class MarketComponent implements OnInit {
     { name: "Potential Deal Size" },
     { name: "Potential GCI" },
     { name: "Award Method" },
-    { name: "Interest/Bids" },
+    { name: "Interest / <br> Bids" },
     { name: "Action" }
   ];
 

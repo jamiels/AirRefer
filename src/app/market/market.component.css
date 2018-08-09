@@ -1,3 +1,6 @@
+.card-body {
+  padding: 0 !important;
+}
 /*
 bootstrap table theme
 */
@@ -27,6 +30,9 @@ bootstrap table theme
   .datatable-body
   .datatable-body-row.datatable-row-even {
   background-color: rgba(0, 0, 0, 0.05);
+}
+.ngx-datatable .datatable-header {
+  background-color: #83ff;
 }
 .ngx-datatable.bootstrap .datatable-body .datatable-body-row.active {
   background-color: #1483ff;

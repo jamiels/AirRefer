@@ -1,14 +1,16 @@
 <!-- START CONTAINER FLUID -->
-<pg-container extraHorizontalClass="bg-white" extraClass="bg-white">
+<div class="container-fluid">
   <!-- START ROW -->
   <div class="row">
     <div class="col">
 
       <!-- START JUMBOTRON -->
       <div class="jumbotron">
-        <pg-container extraHorizontalClass="p-l-0 p-r-0" extraClass="sm-p-l-0 sm-p-r-0">
+        <pg-container extraHorizontalClass="p-l-0 p-r-0"
+          extraClass="sm-p-l-0 sm-p-r-0">
           <div class=" container-fluid   container-fixed-lg sm-p-l-0 sm-p-r-0">
-            <div class="inner" pg-parallax>
+            <div class="inner"
+              pg-parallax>
               <div class="row">
                 <div class="col-xl-7 col-lg-6 ">
                   <h3>Referral Market</h3>
@@ -23,11 +25,24 @@
       <!-- END JUMBOTRON -->
 
       <div class="card-body">
-        <div class="table-responsive">
-          <ngx-datatable #table class='table table-hover' [columns]="columns" [columnMode]="columnModeSetting" [scrollbarH]="scrollBarHorizontal"
-            [headerHeight]="50" [footerHeight]="50" [rowHeight]="'auto'" [limit]="10" [rows]='rows'>
-            <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize" let-selectedCount="selectedCount"
-              let-curPage="curPage" let-offset="offset">
+        <div>
+          <ngx-datatable #table
+            class="material"
+            cellClass="cell-class"
+            [columns]="columns"
+            [columnMode]="'force'"
+            [scrollbarH]="scrollBarHorizontal"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [limit]="10"
+            [rows]='rows'>
+            <ng-template ngx-datatable-footer-template
+              let-rowCount="rowCount"
+              let-pageSize="pageSize"
+              let-selectedCount="selectedCount"
+              let-curPage="curPage"
+              let-offset="offset">
               Showing {{curPage}} to {{pageSize}} of {{rowCount}} entries
             </ng-template>
           </ngx-datatable>
@@ -36,5 +51,5 @@
     </div>
   </div>
   <!-- END ROW -->
-</pg-container>
+</div>
 <!-- END CONTAINER FLUID -->
