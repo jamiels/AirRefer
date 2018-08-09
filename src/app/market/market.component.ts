@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { rows } from './rows.mockup';
 
 @Component({
   selector: "app-market",
@@ -6,25 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./market.component.css"]
 })
 export class MarketComponent implements OnInit {
-  rows = [
-    { id: "Austin", entity: "Male", category: "Swimlane" },
-    { id: "Austin", entity: "Male", category: "DDD" },
-    { id: "Austin", entity: "Male", category: "XX" },
-    { id: "Austin", entity: "Male", category: "ZZ" },
-    { id: "ddd", entity: "Male", category: "XX" },
-    { id: "xxx", entity: "Male", category: "XX" },
-    { id: "qq", entity: "Male", category: "XX" },
-    { id: "rr", entity: "Male", category: "XX" },
-    { id: "tt", entity: "Male", category: "XX" },
-    { id: "nnn", entity: "Male", category: "XX" },
-    { id: "uuu", entity: "Male", category: "XX" },
-    { id: "ttt", entity: "Male", category: "XX" },
-    { id: "eee", entity: "Male", category: "XX" },
-    { id: "ooo", entity: "Male", category: "XX" },
-    { id: "qqq", entity: "Male", category: "XX" },
-    { id: "yy", entity: "Male", category: "XX" },
-    { id: "nnn", entity: "Male", category: "XX" }
-  ];
+  rows = rows;
 
   columns = [
     { name: "ID" },
@@ -37,7 +20,7 @@ export class MarketComponent implements OnInit {
     { name: "Potential Deal Size" },
     { name: "Potential GCI" },
     { name: "Award Method" },
-    { name: "Interest / <br> Bids" },
+    { name: "Interest / Bids" },
     { name: "Action" }
   ];
 
@@ -49,4 +32,18 @@ export class MarketComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  public getCategoryCellClass({ row, column, value }) {
+    return {
+      'text-green': value === 'Residential',
+      'text-blue': value === 'Commercial',
+    }
+  }
+
+  public getAwardMethodCellClass({ row, column, value }) {
+    return {
+      'award-green': value === 'Flat Split',
+      'award-blue': value === 'Negotiated Split',
+    }
+  }
 }

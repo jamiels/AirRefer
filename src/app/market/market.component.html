@@ -28,7 +28,6 @@
         <div>
           <ngx-datatable #table
             class="material"
-            cellClass="cell-class"
             [columns]="columns"
             [columnMode]="'force'"
             [scrollbarH]="scrollBarHorizontal"
@@ -37,6 +36,47 @@
             [rowHeight]="'auto'"
             [limit]="10"
             [rows]='rows'>
+            <div *ngFor="let column of columns">
+              <ngx-datatable-column *ngIf="column.name !== 'Referrer' && column.name !== 'Category' && column.name !== 'Award Method' && column.name !== 'Action'"
+            
+                [name]="column.name">
+                <ng-template let-value="value"
+                  ngx-datatable-cell-template>
+                  {{value}}
+                </ng-template>
+              </ngx-datatable-column>
+              <ngx-datatable-column *ngIf="column.name === 'Referrer'"
+                [name]="column.name">
+                <ng-template let-value="value"
+                  ngx-datatable-cell-template>
+                  <strong> {{value}} </strong>
+                </ng-template>
+              </ngx-datatable-column>
+              <ngx-datatable-column *ngIf="column.name === 'Category'"
+                [cellClass]="getCategoryCellClass"
+                [name]="column.name">
+                <ng-template let-value="value"
+                  ngx-datatable-cell-template>
+                  <strong>{{value}}</strong>
+                </ng-template>
+              </ngx-datatable-column>
+              <ngx-datatable-column *ngIf="column.name === 'Award Method'"
+                [cellClass]="getAwardMethodCellClass"
+                [name]="column.name">
+                <ng-template let-value="value"
+                  ngx-datatable-cell-template>
+                  <strong>{{value}}</strong>
+                </ng-template>
+              </ngx-datatable-column>
+              <ngx-datatable-column *ngIf="column.name === 'Action'"
+                cellClass="action-cell"
+                [name]="column.name">
+                <ng-template let-value="value"
+                  ngx-datatable-cell-template>
+                  <button md-button>View</button>
+                </ng-template>
+              </ngx-datatable-column>
+            </div>
             <ng-template ngx-datatable-footer-template
               let-rowCount="rowCount"
               let-pageSize="pageSize"
